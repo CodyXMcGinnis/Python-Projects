@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .square{
+            width:200px;
+            height: 200px;
+        }
+    </style>
+
+    <title>Playground</title>
+</head>
+<body>
+    <h1 id="heading" style="text-align:center;">Welcome!</h1>
+    <div class="layout" style="display:flex; justify-content: space-evenly; flex-wrap: wrap; gap: 30px;">
+        {% for x in range(0,times): %}
+            <div class="square" style="background-color: {{ color }}; border: 2px solid black; border-radius: 15px;">
+            </div> 
+        {% endfor %}
+    </div>
+</body>
+</html>

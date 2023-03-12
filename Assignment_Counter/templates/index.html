@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Counter</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div>
+            <h1>Counter</h1>
+            <p>Page Visits: {{session['visits']}}     Counter: {{session['counter']}}</p>
+            <a href="/" class="btn btn-primary">Click</a>
+            <a href="/addtwo" class="btn btn-secondary">Add 2</a>
+            <br>
+            <a href="/reset" class="btn btn-warning">Reset Counter</a>
+            <a href="/destroy_session" class="btn btn-danger">Clear Session</a>            
+        </div>
+
+        <form action='/manual' method='post'>
+            <label for='count'>Number to Add:</label>
+            <input type='text' name='count'>
+            <input type='submit' value='Add to Counter'>
+        </form>
+
+    </body>
+</html>

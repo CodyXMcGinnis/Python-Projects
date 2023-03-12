@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>User</title>
+</head>
+<body>
+    
+    <div class="d-flex justify-content-around flex-wrap p-5">
+
+
+            <div class="card col-3 bg-dark text-light">
+                <a id="home" href="/">Home</a>
+                <div class="card-body">
+                    <h2 class="card-title text-primary">User {{ user['id'] }}</h2>
+                    <p class="card-text">Full Name: {{user['first_name']}} {{user['last_name']}}</p>
+                    <p class="card-text">Email: {{user['email']}}</p>
+                    <p class="card-text">Created On: {{ user['created_at'].strftime("%B %d, %Y") }}</p>
+                    <p class="card-text">Last Updated On: {{ user['updated_at'].strftime("%B %d, %Y  at %H:%M:%S") }}</p>
+                    <a href="/users/edit/{{user['id']}}"  >Edit</a> |
+                    <a href="/users/delete/{{user['id']}}"  >Delete</a>
+                </div>
+                
+            </div>
+
+    </div>
+</body>
+</html>

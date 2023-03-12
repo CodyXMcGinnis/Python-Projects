@@ -1,0 +1,23 @@
+body {
+    width: 20%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkgray;
+}
+
+h1, form{
+    padding-left: 25px;
+}
+
+#sub,#back{
+    margin-bottom: 50px;
+}
+
+#Results{
+    padding-left: 25px;
+}
+
+h1,h2{
+    color:blue;
+}
